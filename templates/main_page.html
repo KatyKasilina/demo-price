@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>price demo</title>
+</head>
+<body>
+
+<form action="{{ url_for('index_page') }}" method=post>
+
+    <h3>Добрый день!</h3>
+    <h4>Данное приложение поможет вам подобрать оптимальную цену аренды для вашего предложения с учетом главных параметров</h4>
+    <p>Выберите ваши параметры и нажмите отправить: </p>
+
+    <dl>
+        <dt>Кол-во гостей: <br>
+        <select name="accommodates">
+        <option disabled>Выберите количество</option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> 8 </option>
+        <option value="9"> 9 </option>
+        <option value="10"> 10 </option>
+        <option value="11"> 11 </option>
+        <option value="12"> 12 </option>
+        <option value="13"> 13 </option>
+        <option value="14"> 14 </option>
+        <option value="15"> 15 </option>
+        <option value="19"> >15 </option>
+        </select>
+
+        <dt>Район: <br>
+        <select name="neighbourhood_cleansed">
+        <option disabled>Выберите район</option>
+        <option value="Barking and Dagenham"> Barking and Dagenham </option>
+        <option value="Barnet"> Barnet </option>
+        <option value="Bexley"> Bexley </option>
+        <option value="Brent"> Brent </option>
+        <option value="Bromley"> Bromley </option>
+        <option value="Camden"> Camden </option>
+        <option value="City of London"> City of London </option>
+        <option value="Croydon"> Croydon </option>
+        <option value="Ealing"> Ealing </option>
+        <option value="Enfield"> Enfield </option>
+        <option value="Greenwich"> Greenwich </option>
+        <option value="Hackney"> Hackney </option>
+        <option value="Hammersmith and Fulham"> Hammersmith and Fulham </option>
+        <option value="Haringey"> Haringey </option>
+        <option value="Harrow"> Harrow </option>
+        <option value="Havering"> Havering </option>
+        <option value="Hillingdon"> Hillingdon </option>
+        <option value="Hounslow"> Hounslow </option>
+        <option value="Islington"> Islington </option>
+        <option value="Kensington and Chelsea"> Kensington and Chelsea </option>
+        <option value="Kingston upon Thames"> Kingston upon Thames </option>
+        <option value="Lambeth"> Lambeth </option>
+        <option value="Lewisham"> Lewisham </option>
+        <option value="Merton"> Merton </option>
+        <option value="Newham"> Newham </option>
+        <option value="Redbridge"> Redbridge </option>
+        <option value="Richmond upon Thames"> Richmond upon Thames </option>
+        <option value="Southwark"> Southwark </option>
+        <option value="Sutton"> Sutton </option>
+        <option value="Tower Hamlets"> Tower Hamlets </option>
+        <option value="Waltham Forest"> Waltham Forest </option>
+        <option value="Wandsworth"> Wandsworth </option>
+        <option value="Westminster"> Westminster </option>
+        </select>
+
+        <dt>Тип собственности: <br>
+        <select name="property_type">
+        <option disabled>Выберите тип</option>
+        <option value="Aparthotel"> Aparthotel </option>
+        <option value="Apartment"> Apartment </option>
+        <option value="Bed and breakfast"> Bed and breakfast </option>
+        <option value="Boat"> Boat </option>
+        <option value="Boutique hotel"> Boutique hotel </option>
+        <option value="Bungalow"> Bungalow </option>
+        <option value="Condominium"> Condominium </option>
+        <option value="Cottage"> Cottage </option>
+        <option value="Guest suite"> Guest suite </option>
+        <option value="Guesthouse"> Guesthouse </option>
+        <option value="Greenwich"> Greenwich </option>
+        <option value="Hostel"> Hostel </option>
+        <option value="Hotel"> Hotel </option>
+        <option value="House"> House </option>
+        <option value="Loft"> Loft </option>
+        <option value="Other"> Other </option>
+        <option value="Serviced apartment"> Serviced apartment </option>
+        <option value="Townhouse"> Townhouse </option>
+        <option value="Villa"> Villa </option>
+        </select>
+
+        <dt>Тип комнаты: <br>
+        <select name="room_type">
+        <option disabled>Выберите тип</option>
+        <option value="Entire home/apt"> Entire home/apt </option>
+        <option value="Private room"> Private room </option>
+        <option value="Shared room"> Shared room </option>
+        </select>
+
+        <dt>Политика отмены бронирования: <br>
+        <select name="cancellation_policy">
+        <option disabled>Выберите тип</option>
+        <option value="flexible"> flexible </option>
+        <option value="moderate"> moderate </option>
+        <option value="strict_14_with_grace_period"> strict_14_with_grace_period </option>
+        <option value="super_strict_30"> super_strict_30 </option>
+        <option value="super_strict_60"> super_strict_60 </option>
+        </select>
+
+        <dt>Требование подтвержденного телефона: <br>
+        <select name="require_guest_phone_verification">
+        <option disabled>Выберите тип</option>
+        <option value="f"> No </option>
+        <option value="t"> Yes </option>
+        </select>
+
+        <dt>Кол-во спален: <br>
+        <select name="bedrooms">
+        <option disabled>Выберите количество</option>
+        <option value="0"> 1 </option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> >7 </option>
+        </select>
+
+        <dt>Кол-во кроватей: <br>
+        <select name="beds">
+        <option disabled>Выберите количество</option>
+        <option value="0"> 0 </option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> 8 </option>
+        <option value="9"> 9 </option>
+        <option value="10"> 10 </option>
+        <option value="11"> >10 </option>
+        </select>
+
+        <dt>Размер депозита (оставьте пустым, если депозит не обязателен): <br>
+        <dt><textarea name=security_deposit rows=1 cols=40>{{ security_deposit }}</textarea>
+        <dt><input type=submit value="Отправить">
+    </dl>
+</form>
+
+
+<h2>Ваша рекомендуемая цена:</h2>
+<h3>{{ prediction_message }}</h3>
+
+</body>
+</html>
